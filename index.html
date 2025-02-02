@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday, Madhu!</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #ff6f61;
+      padding: 20px;
+      color: white;
+    }
+    h1 {
+      font-size: 2rem; 
+      margin: 0;
+    }
+    .container {
+      padding: 15px; 
+    }
+    .countdown {
+      font-size: 1.2rem; 
+      margin: 15px 0;
+    }
+    .memories {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px; 
+      margin-top: 15px;
+    }
+    .memories a {
+      text-decoration: none;
+      color: #ff6f61;
+      font-size: 0.9rem; 
+      border: 2px solid #ff6f61;
+      padding: 8px 16px; 
+      border-radius: 5px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .memories a:hover {
+      background-color: #ff6f61;
+      color: white;
+    }
+    .message {
+      font-size: 1rem; 
+      line-height: 1.5;
+      max-width: 100%; 
+      margin: 15px auto;
+      text-align: left;
+      background-color: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    /* Media Queries for Larger Screens */
+    @media (min-width: 600px) {
+      h1 {
+        font-size: 3rem; 
+      }
+      .container {
+        padding: 20px; 
+      }
+      .countdown {
+        font-size: 1.5rem; 
+      }
+      .memories {
+        gap: 20px; 
+      }
+      .memories a {
+        font-size: 1rem; 
+        padding: 10px 20px;
+      }
+      .message {
+        font-size: 1.2rem; 
+        max-width: 600px; 
+        padding: 20px;
+      }
+      .footer {
+        margin-bottom: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Happy Birthday, Madhu!</h1>
+    <p>From your loving Vihaan ❤️</p>
+  </header>
+
+  <div class="container">
+    <div class="countdown" id="countdown"></div>
+
+    <div class="memories">
+      <a href="memory1.html">Our School Trip 👌</a>
+      <a href="memory2.html">Trip to the Charhi 😊</a>
+      <a href="memory4.html">My Recovery time ❤️</a>
+      <a href="memory5.html">Sorry 😞</a>
+      <a href="quiz.html">Quiz Game 😁</a>
+    </div>
+
+    <div class="message">
+      <p>Dear Madhu,</p>
+      <p>On your special day, I want to remind you how much you mean to me. You are the most amazing person I know, and I feel so lucky to have you in my life. Every moment with you is a like a heaven, and I want to take more memorable photos. This is your first birthday after coming in relationship with me which is the worst birthday. I think this indicates how bad of boyfriend I am. I really love but I failed as a boyfriend. I have only one request i.e please celebrate the birthday with the happiness you deserve my love ❤️❤️... </p>
+      <audio src="audio.m4a" controls>I love you</audio>
+      <p>Happy Birthday, my love! 🎉💖</p>
+      <p style="margin-bottom: 3rem;">Forever yours,<br>Vihaan</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>Made with ❤️ by Vihaan for Madhu</p>
+  </footer>
+
+  <script>
+    setInterval((e)=>{
+        document.getElementById('countdown').innerHTML = "Happy Birthday, Madhu! 🎉";
+    },1500)
+  </script>
+</body>
+</html>

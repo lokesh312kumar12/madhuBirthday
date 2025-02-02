@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trip To Charhi</title>
+  <style>
+     @media (min-width: 600px) {
+      h1 {
+        font-size: 2.5rem; 
+      }
+      .container {
+        padding: 20px; 
+      }
+      .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+        gap: 15px;
+      }
+      .gallery img {
+        height: 300px; 
+      }
+      .description {
+        font-size: 1.2rem; 
+        max-width: 800px; 
+        padding: 20px;
+      }
+      .back-button a {
+        font-size: 1rem;
+        padding: 10px 20px;
+      }
+    }
+    
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #ff6f61;
+      padding: 20px;
+      color: white;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+    .container {
+      padding: 20px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .gallery img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+    .description {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 20px auto;
+      text-align: left;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .back-button {
+      margin: 20px 0;
+    }
+    .back-button a {
+      text-decoration: none;
+      color: #ff6f61;
+      font-size: 1rem;
+      border: 2px solid #ff6f61;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .back-button a:hover {
+      background-color: #f0a05e;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Trip To Charhi</h1>
+  </header>
+
+  <div class="container">
+    <div class="gallery">
+        <img src="images/charhi/4.jpeg" alt="First Meet Photo 4">
+        <img src="images/charhi/3.jpeg" alt="First Meet Photo 3">
+        <img src="images/charhi/2.jpeg" alt="First Meet Photo 2">
+        <img src="images/charhi/1.jpeg" alt="First Meet Photo 1">
+        
+    </div>
+
+    <div class="description">
+      <p>We went to Shawarma Hotel our first group meet up with firend.</p>
+      <p>We enjoyed a lot we had taken multiple photos and eated too much tasty foods. Haan bus thoda atharv prem log v cooperate karta toh aur maja aata but koi na waise v bahut maja aaya. <strong>Thank you for inviting me there madhu.... </strong></p>
+    </div>
+
+    <div class="back-button" style="margin-top: 5%;">
+      <a href="index.html">Back to Home</a>
+    </div>
+  </div>
+</body>
+</html>

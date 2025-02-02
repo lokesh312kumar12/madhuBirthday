@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday, Madhu!</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #ff6f61;
+      padding: 20px;
+      color: white;
+    }
+    h1 {
+      font-size: 2rem; 
+      margin: 0;
+    }
+    .container {
+      padding: 15px; 
+    }
+    .message {
+      font-size: 1rem; 
+      line-height: 1.5;
+      max-width: 100%; 
+      margin: 15px auto;
+      text-align: left;
+      background-color: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .quiz {
+      text-align: left;
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 2rem;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .question {
+      margin-bottom: 2rem;
+    }
+    .question p {
+      font-weight: bold;
+    }
+    label {
+      display: block;
+      margin: 1rem 0;
+    }
+    button {
+      background-color: #ff6f61;
+      margin-bottom: 2rem;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #ff4a3d;
+    }
+    #result {
+      margin-top: 1rem;
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    #result {
+      padding: 1rem;
+    }
+    #result h3 {
+      margin-top: 1rem;
+    }
+
+    #feedback {
+      margin: 0;
+    }
+
+    @media (min-width: 600px) {
+      h1 {
+        font-size: 3rem; 
+      }
+      .container {
+        padding: 20px; 
+      }
+      .countdown {
+        font-size: 1.5rem; 
+      }
+      .memories {
+        gap: 20px; 
+      }
+      .memories a {
+        font-size: 1rem; 
+        padding: 10px 20px;
+      }
+      .message {
+        font-size: 1.2rem; 
+        max-width: 600px; 
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header id="header">
+    <h1>Let's Play A Quiz Game😁!</h1>
+  </header>
+  
+  <div id="result" style="display: none;">
+    <h3>Your Score: <span id="score"></span>/5</h3>
+    <p id="feedback"></p>
+  </div>
+
+  <div class="container">
+    <div class="quiz">
+      <h2>How Well Do You Know Me?</h2>
+      <form id="quiz-form">
+        <div class="question">
+          <p>1. Which subject I hates the most ???</p>
+          <label><input type="radio" name="q1" value="A"> Hindi</label>
+          <label><input type="radio" name="q1" value="B"> Science</label>
+          <label><input type="radio" name="q1" value="C"> Maths</label>
+          <label><input type="radio" name="q1" value="D"> English</label>
+        </div>
+
+        <div class="question">
+          <p>2. Which subject I like the most ???</p>
+          <label><input type="radio" name="q2" value="A"> Maths</label>
+          <label><input type="radio" name="q2" value="B"> Science</label>
+          <label><input type="radio" name="q2" value="C"> Hindi </label>
+          <label><input type="radio" name="q2" value="D"> Social Science</label>
+        </div>
+
+        <div class="question">
+          <p>3. Who is my favorite teacher???</p>
+          <label><input type="radio" name="q3" value="A"> Sanjay Sir</label>
+          <label><input type="radio" name="q3" value="B"> Sambhu Sir</label>
+          <label><input type="radio" name="q3" value="C"> Prem Sir</label>
+          <label><input type="radio" name="q3" value="D"> Naresh Sir</label>
+        </div>
+
+        <div class="question">
+          <p>4. What do I like You to call the most???</p>
+          <label><input type="radio" name="q4" value="A"> Madhu</label>
+          <label><input type="radio" name="q4" value="B"> Tuntun Mosi</label>
+          <label><input type="radio" name="q4" value="C"> Cutie pie</label>
+          <label><input type="radio" name="q4" value="D"> Madam ji</label>
+        </div>
+
+        <div class="question">
+          <p>5. What would I like to eat???</p>
+          <label><input type="radio" name="q5" value="A"> Paneer (made by you)</label>
+          <label><input type="radio" name="q5" value="B"> Mushroom</label>
+          <label><input type="radio" name="q5" value="C"> Panner Chilli</label>
+          <label><input type="radio" name="q5" value="D"> Cake</label>
+        </div>
+
+        <button type="button" onclick="checkAnswers()">Submit</button>
+      </form>
+
+    </div>
+  </div>
+
+  <footer>
+    <p>Made with ❤️ by Vihaan for Madhu</p>
+  </footer>
+
+  <script>
+    alert("Remember to take screenshot of your score and send it to me madhu 💘💘")
+    function checkAnswers() {
+      const answers = {
+        q1: "A", 
+        q2: "B", 
+        q3: "D",
+        q4: "D",
+        q5: "A",
+      };
+
+      let score = 0;
+      for (let i = 1; i <= 5; i++) {
+        const selected = document.querySelector(`input[name="q${i}"]:checked`);        
+        if (selected === null) {
+          document.getElementById('header').scrollIntoView({ behavior: 'smooth' });
+          alert('Please attempt every question My Dear Lovely Madhu ❤️❤️');
+          return;
+        }
+        else if (selected && selected.value === answers[`q${i}`]) {
+          score++;
+        } 
+      }
+      document.getElementById("score").textContent = score;
+      document.getElementById("result").style.display = "block";
+
+      const feedback = document.getElementById("feedback");
+      if (score >= 4) {
+        feedback.textContent = "Wow, you know me so well! I am very happy to know that madhu 😘😘😘";
+      } else if (score >= 2) {
+        feedback.textContent = "Not bad, we can understand each other more better but! 😊";
+      } else {
+        feedback.textContent = "Hmm, I guess we need to spend more quality time madhu! 😉";
+      }
+      document.getElementById('header').scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html
